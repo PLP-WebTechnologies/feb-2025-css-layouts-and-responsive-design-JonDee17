@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout with CSS</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">ResponsiveDesign</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#content">Content</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Modern CSS Layouts</h1>
+            <p>A responsive design using Flexbox and Grid layouts with media queries for optimal viewing on all devices.</p>
+        </div>
+    </section>
+
+    <!-- Features Section with Grid -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Flexbox Layout</h3>
+                    <p>Flexible box layout for one-dimensional layouts like navigation bars and content sections.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>CSS Grid</h3>
+                    <p>Two-dimensional grid system for complex layouts and card arrangements.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Media Queries</h3>
+                    <p>Responsive design that adapts to different screen sizes and devices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section with Flexbox -->
+    <section class="content" id="content">
+        <div class="container">
+            <h2>About This Layout</h2>
+            <div class="content-flex">
+                <div class="content-text">
+                    <p>This layout demonstrates the power of modern CSS techniques. The navigation uses Flexbox for horizontal alignment, while the features section uses CSS Grid for a responsive card layout.</p>
+                    <p>Media queries ensure that the layout adapts to different screen sizes, providing an optimal viewing experience on desktops, tablets, and mobile devices.</p>
+                </div>
+                <div class="content-image">
+                    <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                         alt="CSS Layout Example" 
+                         class="responsive-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <p>&copy; 2025 Responsive Design. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for mobile menu toggle
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
